@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CarrMIS4200.Models.DoctorAppointment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Doctor.docLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patient.patientLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.docLastName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Doctor.docLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient.patientLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.docLastName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.doctorAppointmentId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.doctorAppointmentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.doctorAppointmentId })
+        </td>
+    </tr>
+}
+
+</table>

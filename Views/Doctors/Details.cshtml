@@ -1,0 +1,42 @@
+﻿@model CarrMIS4200.Models.Doctor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Doctor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.docLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.docLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.docFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.docFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.docPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.docPhone)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.doctorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

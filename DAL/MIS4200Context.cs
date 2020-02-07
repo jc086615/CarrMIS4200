@@ -20,12 +20,22 @@ namespace CarrMIS4200.DAL
         public DbSet<OrderDetail> OrderDetail { get; set; }
         public DbSet<Products> Products { get; set; }
 
+        public DbSet<Patient> Patients { get; set; }
+        public DbSet<Doctor> Doctors { get; set; }
+        public DbSet<DoctorAppointment> DoctorAppointments { get; set; }
+
         // add this method - it will be used later
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             base.OnModelCreating(modelBuilder);
         }
+
+        //public System.Data.Entity.DbSet<CarrMIS4200.Models.Patient> Patients { get; set; }
+
+        //public System.Data.Entity.DbSet<CarrMIS4200.Models.Doctor> Doctors { get; set; }
+
+        //public System.Data.Entity.DbSet<CarrMIS4200.Models.DoctorAppointment> DoctorAppointments { get; set; }
     }
     // add this method - it will be used later
 
